@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+
+# Data files
+src/data/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
