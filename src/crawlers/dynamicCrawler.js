@@ -1,7 +1,7 @@
 import puppeteer from "puppeteer";
 import { dynamicTarget, staticTarget } from "../config/crawlerConfig.js";
 import { saveToJson } from "../utils/storageUtil.js";
-import { getTimestamp } from "../utils/timeUtil.js";
+import { getCurrentTime } from "../utils/timeUtil.js";
 
 /**
  * 爬取动态渲染页面
@@ -38,7 +38,7 @@ async function crawlDynamicPage() {
       }));
     });
 
-    let fileName = `products-${getTimestamp()}.json`;
+    let fileName = `products-${getCurrentTime("YYYYMMDDHHmmssSSS")}.json`;
     // 保存数据
     await saveToJson(result, fileName);
     return result;

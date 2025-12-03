@@ -30,7 +30,7 @@ async function crawlStaticPage() {
   });
 
   // 使用合法的文件名格式（将冒号替换为连字符）
-  let fileName = `${getCurrentTime("YYYYMMDDHHmmssSSS")}.json`;
+  let fileName = `静态-${getCurrentTime("YYYYMMDDHHmmssSSS")}.json`;
 
   // 保存数据
   await saveToJson(result, fileName);
