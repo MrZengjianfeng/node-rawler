@@ -1,17 +1,17 @@
-import { crawlStaticPage }  from "./crawlers/staticCrawler.js";
-import { crawlDynamicPage }  from "./crawlers/dynamicCrawler.js";
+import { crawlStaticPage } from "./crawlers/staticCrawler.js";
+import { crawlDynamicPage } from "./crawlers/dynamicCrawler.js";
 
 // 主函数
 async function main() {
-    console.log("爬虫启动...");
+  console.log("爬虫启动...");
 
-    // 爬取静态页面
-    await crawlStaticPage();
+  // 爬取静态页面
+  await crawlStaticPage();
 
-    // 爬取动态页面（可选）
-    // await crawlDynamicPage();
+  // 爬取动态页面（可选）
+  await crawlDynamicPage();
 
-    console.log("爬虫结束！");
+  console.log("爬虫结束！");
 }
 
 // 执行主函数
