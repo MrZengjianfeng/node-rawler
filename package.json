@@ -4,6 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node src/index.js",
+    "schedule": "node src/index.js --schedule",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
