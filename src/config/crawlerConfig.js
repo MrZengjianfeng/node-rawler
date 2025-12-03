@@ -16,7 +16,7 @@ export const staticTarget = {
         sortSelector: ".c-index-single",
         titleSelector: ".c-font-medium",
         linkSelector: "a",
-        hotSelector:'.c-text'
+        hotSelector:'.c-text',
     },
 };
 

@@ -13,10 +13,6 @@ async function crawlStaticPage() {
     // 发送请求获取HTML
     const html = await limitedFetch(staticTarget.url, staticTarget.headers);
     if (!html) return;
-
-    // 打印原始HTML内容
-    console.log("原始HTML内容:", html);
-
     // 解析HTML（cheerio）
     const $ = cheerio.load(html);
     const result = [];
