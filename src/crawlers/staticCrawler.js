@@ -1,5 +1,5 @@
 import * as cheerio from "cheerio"; // 整体导入cheerio模块
-import { limitedFetch } from "../utils/requestUtil.js";
+import { limitedFetchGet } from "../utils/requestUtil.js";
 import { staticTarget } from "../config/crawlerConfig.js";
 import { saveToJson } from "../utils/storageUtil.js";
 import { getCurrentTime } from "../utils/timeUtil.js";
@@ -11,7 +11,7 @@ async function crawlStaticPage() {
   console.log("开始爬取静态页面：", staticTarget.url);
 
   // 发送请求获取HTML
-  const html = await limitedFetch(staticTarget.url, staticTarget.headers);
+  const html = await limitedFetchGet(staticTarget.url, staticTarget.headers);
   if (!html) return;
   // 解析HTML（cheerio）
   const $ = cheerio.load(html);
