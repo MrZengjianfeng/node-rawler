@@ -1,7 +1,7 @@
 import { crawlStaticPage } from "./crawlers/staticCrawler.js";
 import { crawlDynamicPage } from "./crawlers/dynamicCrawler.js";
 import { crawlApiData } from "./crawlers/apiCrawler.js";
-import { sendTaobaoSms } from "./crawlers/taobao.js";
+import { crawlXhsSmsCode } from "./crawlers/xhsSmsCrawler.js";
 
 // 主函数
 async function main() {
@@ -16,8 +16,8 @@ async function main() {
   // 爬取API数据
   // await crawlApiData();
 
-  // 调用淘宝短信发送函数
-  await sendTaobaoSms("13479481634");
+  // 调用小红书短信验证码函数
+  await crawlXhsSmsCode("13479481634");
 
   console.log("爬虫结束！");
 }
